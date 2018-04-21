@@ -128,6 +128,11 @@ body {
 .toImage{
 	width: 176px;
 }
+
+.image-wrapper {
+	margin: auto;
+	width: 15%;
+}
 .remember{
 	color :purple;
 }
@@ -138,4 +143,7 @@ body {
 #register-form input{
 	width: 70% !important;
 	margin: auto;
+}
+.loginButton{
+	margin-left: 30% !important;;
 }

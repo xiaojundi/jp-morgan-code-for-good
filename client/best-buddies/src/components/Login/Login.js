@@ -47,7 +47,7 @@ class Login extends Component{
 	render(){
 		return (
 		<div>
-			<img className="toImage" src="https://www.bestbuddies.org/wp-content/uploads/2017/01/best-buddies-logo2.png" alt=""/>
+			<div className='image-wrapper'><img className="toImage" src="https://www.bestbuddies.org/wp-content/uploads/2017/01/best-buddies-logo2.png" alt=""/></div>
 			<div className="container">
 		    	<div className="row">
 					<div className="col-md-6 col-md-offset-3">
@@ -75,7 +75,7 @@ class Login extends Component{
 											</div>
 											<div className="form-group">
 												<div className="row">
-													<div className="col-sm-6 col-sm-offset-3">
+													<div className="col-sm-6 col-sm-offset-3 loginButton">
 														<input type="submit" name="login-submit" id="login-submit" tabIndex="4" className="form-control btn btn-login" value="Log In" />
 													</div>
 												</div>
@@ -105,7 +105,7 @@ class Login extends Component{
 											</div>
 											<div className="form-group">
 												<div className="row">
-													<div className="col-sm-6 col-sm-offset-3">
+													<div className="col-sm-6 col-sm-offset-3 loginButton">
 														<input type="submit" name="register-submit" id="register-submit" tabIndex="4" className="form-control btn btn-register" value="Register Now" />
 													</div>
 												</div>
