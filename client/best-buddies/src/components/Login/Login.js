@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './login.css'
 import $ from 'jquery'
+import { Route, Redirect } from 'react-router'
 
 $(function() {
 
@@ -26,7 +27,8 @@ class Login extends Component{
 		super(props)
 		this.state= {
 			userName: "",
-			passWord: ""
+			passWord: "",
+			isAuthenticated: false
 		}
 		this.handleChangeUser = this.handleChangeUser.bind(this);
 		this.handleChangePassword = this.handleChangePassword.bind(this);
@@ -38,13 +40,15 @@ class Login extends Component{
   	handleChangePassword(event){
   	  this.setState({passWord: event.target.value});
   	}
-  	handleSubmit(event){
-
-    fetch('https://facebook.github.io/react-native/movies.json')
-    .then((response) => console.log("asdfasdfa"))
-      event.preventDefault();
+  	handleSubmit(){
+  		if(this.state.userName!=""){
+  			this.setState({isAuthenticated: true})
+  		}
   	}
 	render(){
+		if(this.state.isAuthenticated){
+	       return <Redirect to='/profile' />;
+  		}
 		return (
 		<div>
 			<div className='image-wrapper'><img className="toImage" src="https://www.bestbuddies.org/wp-content/uploads/2017/01/best-buddies-logo2.png" alt=""/></div>
@@ -66,7 +70,7 @@ class Login extends Component{
 							<div className="panel-body">
 								<div className="row">
 									<div className="col-lg-12">
-										<form onSubmit={this.handleSubmit} id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style={{display: "block"}}>
+										<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style={{display: "block"}}>
 											<div className="form-group">
 												<input onChange={this.handleChangeUser} value={this.state.userName} type="text" name="username" id="username2" tabIndex="1" className="form-control" placeholder="username"/>
 											</div>
@@ -76,7 +80,7 @@ class Login extends Component{
 											<div className="form-group">
 												<div className="row">
 													<div className="col-sm-6 col-sm-offset-3 loginButton">
-														<input type="submit" name="login-submit" id="login-submit" tabIndex="4" className="form-control btn btn-login" value="Log In" />
+														<input onClick={this.handleSubmit} type="button" name="login-submit" id="login-submit" tabIndex="4" className="form-control btn btn-login" value="Log In" />
 													</div>
 												</div>
 											</div>
