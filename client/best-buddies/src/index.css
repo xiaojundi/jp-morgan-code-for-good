@@ -13,3 +13,7 @@ body {
   background-color: #5a4099 !important;
   color: white !important;
 }
+
+.button-name{
+  margin-right: 5px;
+}

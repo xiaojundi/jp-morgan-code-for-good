@@ -56,7 +56,7 @@ export class Profile extends Component {
                 <div className="col-sm-8">
                     <br />
                     <br />
-                    <h1 >{firstName} {lastName}</h1>
+                    <h1 >{firstName} {lastName}({role})</h1>
                     <br />
                 </div>
                 <div className="col-sm-2">
