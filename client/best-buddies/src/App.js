@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+<<<<<<< Updated upstream
 import Login from './components/Login/Login'
+=======
+>>>>>>> Stashed changes
+import { Profile } from './components/profile/Profile';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< Updated upstream
         <Login />
+=======
+>>>>>>> Stashed changes
+        <Profile />
       </div>
     );
   }

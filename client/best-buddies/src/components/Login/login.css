@@ -128,6 +128,11 @@ body {
 .toImage{
 	width: 176px;
 }
+
+.image-wrapper {
+	margin: auto;
+	width: 15%;
+}
 .remember{
 	color :purple;
 }

@@ -19,7 +19,9 @@
   "homepage": "https://github.com/jerseycity18/team-8#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "nodemon": "^1.17.3",
