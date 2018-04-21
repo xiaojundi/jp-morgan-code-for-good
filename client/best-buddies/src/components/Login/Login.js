@@ -47,7 +47,7 @@ class Login extends Component{
 	render(){
 		return (
 		<div>
-			<img className="toImage" src="https://www.bestbuddies.org/wp-content/uploads/2017/01/best-buddies-logo2.png" alt=""/>
+			<div className='image-wrapper'><img className="toImage" src="https://www.bestbuddies.org/wp-content/uploads/2017/01/best-buddies-logo2.png" alt=""/></div>
 			<div className="container">
 		    	<div className="row">
 					<div className="col-md-6 col-md-offset-3">
