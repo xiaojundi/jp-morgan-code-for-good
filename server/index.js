@@ -7,10 +7,10 @@ const compression = require('compression');
 require('dotenv').config();
 
 
-//app.use(cors)
-////app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({extended:false}));
-//app.use(compression());
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(compression());
 
 //app.use(require('./routes'));//
 
@@ -22,7 +22,7 @@ app.get('/buddyInfo', (req, res, next) => {
         firstName: 'Billy',
         lastName: 'Doe',
         age: 20,
-        interests: ['soccer', 'baseball', 'video games', 'pokemon'],
+        interests: [{name:'soccer',description:'I like to kick stuff'}, {name:'baseball',description:'I like to hit stuff'}, {name:'video games',description:'I will beat anyone in Call of Duty'}, {name:'pokemon',description:'Pretty self explanitory'}],
         gender: 'Male',
         preferredCommunication: 'In Person',
         email: 'BillyD@example.com',
@@ -42,7 +42,7 @@ app.get('/volunteerInfo', (req, res, next) => {
         firstName: 'Jimmy',
         lastName: 'Dean',
         age: 24,
-        interests: ['soccer', 'baseball', 'video games', 'pokemon'],
+        interests: [{ name: 'soccer', description: 'I like to kick stuff' }, { name: 'baseball', description: 'I like to hit stuff' }, { name: 'video games', description: 'I will beat anyone in Call of Duty' }, { name: 'pokemon', description: 'Pretty self explanitory' }],
         gender: 'Male',
         preferredCommunication: 'In Person',
         email: 'JimmyD@example.com',
@@ -99,5 +99,5 @@ app.get('/',(req,res,next)=>{
 })
 
 
-app.listen(3000);
+app.listen(5000);
 
