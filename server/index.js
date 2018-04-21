@@ -43,8 +43,17 @@ const TEST_VOLUNTEERS = [{
 }]
 //app.use(require('./routes'));//
 
+/**
+ * Returns information about the buddy.
+ * 
+ * Ideally, the plan was to encapsulate this logic, it would 
+ * expect a first and last name in the query parameters and 
+ * uses that information to pull from the database.
+ * 
+ * returns a json object with the buddy information
+ */
 app.get('/buddyInfo', (req, res, next) => {
-    console.log('hi');
+    //console.log('hi');
     return res.status(200).send({
         username: 'Billy D',
         role: 'buddy',
@@ -63,7 +72,13 @@ app.get('/buddyInfo', (req, res, next) => {
         description: 'Lorem Ipsum'
     })
 });
-
+/**
+ * Returns information about the volunteer in a json object
+ * 
+ * Ideally, This would use the first and last name to pull the 
+ * volunteer information from the database and return it
+ * 
+ */
 app.get('/volunteerInfo', (req, res, next) => {
     return res.status(200).send({
         username: 'Jimmy Dean',
@@ -84,6 +99,10 @@ app.get('/volunteerInfo', (req, res, next) => {
     })
 });
 
+/**
+ * Ideally, this would search the database for buddies and volunteers that
+ * are already paired up and return an array of objects describing that pair
+ */
 app.get('/alreadyPaired', (req, res, next) => {
     return res.status(200).send([
         { buddy: 'Billy D', volunteer: 'Jimmy Dean' },
@@ -93,7 +112,11 @@ app.get('/alreadyPaired', (req, res, next) => {
         { 'buddy': 'David O', volunteer: 'Chris' }
     ])
 })
-
+/**
+ * This would be the main logic, we loop through potential
+ * volunteers and build a score based on the most important pieces of
+ * information
+ */
 app.get('/potentialPairs', (req, res, next) => {
     const buddy = {
         username: 'Billy D',
