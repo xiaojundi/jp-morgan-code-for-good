@@ -11,12 +11,12 @@ export class Profile extends Component {
         super(props);
         this.state = {
             data: {
-                firstName: 'Namita',
-                lastName: 'Chakraborty',
+                firstName: 'Xiaojun',
+                lastName: 'Di',
                 description: 'A long description about me',
                 joined: '2.13.2014',
-                username: 'NamitaC',
-                gender: 'Female',
+                username: 'Shawn',
+                gender: 'Male',
                 age: 24,
                 bestTimeToSocialize: 'Weekends',    
                 borough: 'Queens',
@@ -149,22 +149,3 @@ export class Profile extends Component {
         )
     }
 }
-
-// Profile.defaultProps =  {
-//     firstName: 'Namita',
-//     lastName: 'Chakraborty',
-//     description: 'A long description about me',
-//     joined: '2.13.2014',
-//     username: 'NamitaC',
-//     gender: 'Female',
-//     age: 24,
-//     bestTimeToSocialize: 'Weekends',    
-//     borough: 'Queens',
-//     zipCode: 11428,
-//     preferredCommunication: 'train',
-//     interests: [
-//         {name: 'Acting / Drama', description: 'I love and enjoy doing teather'},
-//         {name: 'Cooking', description: 'Handmade pastas are my favorite'},
-//         {name: 'Painting', description: 'Enjoy painting comic superheroes'}
-//     ]
-// }

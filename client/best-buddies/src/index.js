@@ -15,4 +15,3 @@ ReactDOM.render(
         <Route exact path="/profile" component={Profile} />
       </div>
    </HashRouter >, document.getElementById('root'));
-registerServiceWorker();
